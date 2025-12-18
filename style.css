@@ -52,6 +52,7 @@ body {
 .container {
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
   padding: 0 var(--container-padding);
 }
 
@@ -70,15 +71,27 @@ body {
 
 /* --- NAV --- */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 0;
+  width: 100%;
+  padding: 1.5rem 0;
   margin-bottom: clamp(2rem, 5vw, 4rem);
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  background-color: rgba(2, 4, 10, 0.8);
+}
+
+:root[data-theme='light'] nav {
+  background-color: rgba(248, 250, 252, 0.8);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -259,6 +272,7 @@ nav {
   background: var(--bg-card);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
+  box-shadow: 0 5px 25px -10px var(--green-accent);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   overflow: hidden;
@@ -363,6 +377,7 @@ nav {
   background: var(--bg-card);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: 0 5px 25px -10px var(--green-accent);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   padding: 1.5rem;
@@ -452,5 +467,25 @@ footer {
   .footer-content {
     justify-content: center;
     flex-direction: column;
+  }
+}
+@media (min-width: 2500px) {
+  html {
+    font-size: 150%;
+  }
+
+  .container {
+    max-width: 1800px;
+    padding: 0 clamp(3rem, 5vw, 6rem);
+  }
+
+  .grid-projects,
+  .grid-skills {
+    gap: 3rem;
+  }
+
+  .project-img,
+  .project-preview {
+    height: 300px;
   }
 }
