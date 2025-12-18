@@ -336,6 +336,101 @@ nav {
   cursor: default;
 }
 
+/* --- SKILLS GRID --- */
+.center-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.grid-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.skill-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+.skill-card:hover {
+  border-color: var(--green-accent);
+  background: linear-gradient(
+    to bottom right,
+    var(--bg-card),
+    rgba(16, 185, 129, 0.05)
+  );
+}
+
+.skill-icon-box {
+  width: 40px;
+  height: 40px;
+  background: var(--green-dim);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-accent);
+  margin-bottom: 1rem;
+}
+
+.skill-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+.skill-list li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.skill-list li::before {
+  content: '•';
+  color: var(--green-accent);
+  font-weight: bold;
+}
+
+/* --- FOOTER --- */
+footer {
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+.socials a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.socials a:hover {
+  color: var(--green-accent);
+}
+
 /* --- MOBILE --- */
 @media (max-width: 768px) {
   .nav-links {
@@ -343,5 +438,9 @@ nav {
   }
   .nav-links a {
     display: none;
+  }
+  .footer-content {
+    justify-content: center;
+    flex-direction: column;
   }
 }
