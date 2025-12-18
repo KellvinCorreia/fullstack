@@ -153,6 +153,13 @@ nav .container {
   display: block;
 }
 
+:root[data-theme='light'] .icon-sun {
+  display: block;
+}
+:root[data-theme='light'] .icon-moon {
+  display: none;
+}
+
 /* --- HERO --- */
 .hero {
   text-align: center;
