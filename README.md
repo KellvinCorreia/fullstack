@@ -11,12 +11,20 @@ Bem-vindo ao meu portfólio pessoal! Este projeto foi desenvolvido para apresent
 Este portfólio é uma **Landing Page Responsiva** construída do zero, sem o uso de frameworks pesados, focada em performance, semântica e uma experiência de usuário fluida. O objetivo foi criar uma interface moderna, com uma estética premium.
 
 ### ✨ Destaques Visuais
-*   **Tema Dark/Light**: Alternância de temas com persistência de preferência do usuário (usando `localStorage`).
-*   **Design Moderno**: Utilização de **Glassmorphism**, gradientes sutis e sombras suaves.
-*   **Tipografia**:
-    *   **Space Grotesk**: Para o corpo do texto, trazendo modernidade e legibilidade.
-    *   **JetBrains Mono**: Para detalhes técnicos e badges, remetendo ao ambiente de código.
-*   **Responsividade**: Layout adaptável para mobile, tablet e desktop usando `clamp()` e CSS Grid/Flexbox.
+
+- **Tema Dark/Light**: Alternância de temas com persistência de preferência do usuário (usando `localStorage`).
+- **Design Moderno**: Utilização de **Glassmorphism**, gradientes sutis e sombras suaves.
+- **Tipografia**:
+  - **Space Grotesk**: Para o corpo do texto, trazendo modernidade e legibilidade.
+  - **JetBrains Mono**: Para detalhes técnicos e badges, remetendo ao ambiente de código.
+- **Acessibilidade (WCAG)**:
+  - Navegação completa via **Teclado** (Skip Link, Focus Ring).
+  - Suporte a **Movimento Reduzido** (`prefers-reduced-motion`).
+  - Semântica e ARIA attributes otimizados para leitores de tela.
+- **Responsividade & UI**:
+  - Menu Mobile com efeito Glassmorphism.
+  - Layout adaptável para mobile, tablet e desktop.
+  - Scrollbar e Focus Ring personalizados no tema do site.
 
 ---
 
@@ -24,17 +32,17 @@ Este portfólio é uma **Landing Page Responsiva** construída do zero, sem o us
 
 O projeto foi construído utilizando as bases fundamentais da web, garantindo leveza e total controle sobre o código:
 
-* **HTML5 Semântico**: Estrutura acessível e organizada.
-* **CSS3 Moderno**:
-    *   Variáveis CSS (`:root`) para fácil manutenção de temas.
-    *   `Flexbox` e `Grid Layout` para posicionamento.
-    *   Animações e Transições (`transition`, `hover`).
-    *   Filtros de `backdrop-filter` para efeitos de vidro.
-* **JavaScript (Vanilla)**:
-    *   Manipulação do DOM.
-    *   Lógica de alternância de temas.
-    *   Sem dependências externas.
-* **SVG Icons**: Ícones vetorizados para máxima nitidez em qualquer resolução.
+- **HTML5 Semântico**: Estrutura acessível e organizada.
+- **CSS3 Moderno**:
+  - Variáveis CSS (`:root`) para fácil manutenção de temas.
+  - `Flexbox` e `Grid Layout` para posicionamento.
+  - Animações e Transições (`transition`, `hover`).
+  - Filtros de `backdrop-filter` para efeitos de vidro.
+- **JavaScript (Vanilla)**:
+  - Manipulação do DOM.
+  - Lógica de alternância de temas.
+  - Sem dependências externas.
+- **SVG Icons**: Ícones vetorizados para máxima nitidez em qualquer resolução.
 
 ---
 
@@ -42,11 +50,11 @@ O projeto foi construído utilizando as bases fundamentais da web, garantindo le
 
 A escolha das cores foi intencional para transmitir uma sensação de **tecnologia, modernidade e crescimento**.
 
-| Cor | Hex | Significado |
-| :--- | :--- | :--- |
-| **Green Accent** | `#10b981` | Representa **crescimento, energia e sucesso**. É a cor primária que guia o olhar do usuário para ações importantes (botões, links). |
-| **Background Dark** | `#02040a` | Um tom quase preto, profundo, que oferece alto contraste e conforto visual para longas sessões de leitura. |
-| **Glass Effect** | `rgba` | Camadas translúcidas que adicionam profundidade e sofisticação à interface. |
+| Cor                 | Hex       | Significado                                                                                                                         |
+| :------------------ | :-------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| **Green Accent**    | `#10b981` | Representa **crescimento, energia e sucesso**. É a cor primária que guia o olhar do usuário para ações importantes (botões, links). |
+| **Background Dark** | `#02040a` | Um tom quase preto, profundo, que oferece alto contraste e conforto visual para longas sessões de leitura.                          |
+| **Glass Effect**    | `rgba`    | Camadas translúcidas que adicionam profundidade e sofisticação à interface.                                                         |
 
 > **Por que Dark Mode por padrão?**
 > Preferência pessoal para interfaces escuras para reduzir a fadiga ocular. O tema claro está disponível como uma opção secundária para ambientes muito iluminados.
@@ -57,8 +65,8 @@ A escolha das cores foi intencional para transmitir uma sensação de **tecnolog
 
 Aqui estão os links oficiais para o design e a visualização do projeto:
 
-*   📱 **Deploy (GitHub Pages)**: [Acesse o Portfólio Online](https://kellvincorreia.github.io/fullstack/)
-*   🎨 **Design no Figma**: [Visualizar Protótipo](https://www.figma.com/design/UQtgO2KUB8sB2i5HvmgCir/Portifolio-Kellvin?node-id=103-2&t=surYwFfZEYhr0puq-1)
+- 📱 **Deploy (GitHub Pages)**: [Acesse o Portfólio Online](https://kellvincorreia.github.io/fullstack/)
+- 🎨 **Design no Figma**: [Visualizar Protótipo](https://www.figma.com/design/UQtgO2KUB8sB2i5HvmgCir/Portifolio-Kellvin?node-id=103-2&t=surYwFfZEYhr0puq-1)
 
 ---
 
@@ -74,7 +82,7 @@ Se você quiser rodar este projeto na sua máquina:
     ```bash
     cd fullstack
     ```
-3.  **Abra o arquivo `index.html`** no seu navegador de preferência ou use uma extensão como o *Live Server* do VS Code.
+3.  **Abra o arquivo `index.html`** no seu navegador de preferência ou use uma extensão como o _Live Server_ do VS Code.
 
 ---
 
@@ -82,5 +90,5 @@ Se você quiser rodar este projeto na sua máquina:
 
 Feito com 💚 por **Kellvin Correia Alves**.
 
-*   [LinkedIn](https://linkedin.com/in/kellvin-correia-alves/)
-*   [GitHub](https://github.com/KellvinCorreia)
+- [LinkedIn](https://linkedin.com/in/kellvin-correia-alves/)
+- [GitHub](https://github.com/KellvinCorreia)
