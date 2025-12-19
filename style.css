@@ -69,8 +69,8 @@ body {
   height: 48px;
 }
 
-/* --- NAV --- */
-nav {
+/* --- HEADER --- */
+header {
   width: 100%;
   padding: 1.5rem 0;
   margin-bottom: clamp(2rem, 5vw, 4rem);
@@ -84,11 +84,11 @@ nav {
   background-color: rgba(2, 4, 10, 0.8);
 }
 
-:root[data-theme='light'] nav {
+:root[data-theme='light'] header {
   background-color: rgba(248, 250, 252, 0.8);
 }
 
-nav .container {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -212,7 +212,11 @@ nav .container {
 
 .btn {
   padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.6rem, 4vw, 1.8rem);
-  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(100px, 190px, 400px);
+  border-radius: 40px;
   font-weight: 600;
   font-size: clamp(0.7rem, 2vw, 0.9rem);
   text-decoration: none;
@@ -231,7 +235,7 @@ nav .container {
 }
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--green-accent);
+  border: 2px solid var(--green-accent);
   color: var(--text-main);
 }
 .btn-outline:hover {
@@ -279,7 +283,7 @@ nav .container {
   background: var(--bg-card);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  box-shadow: 0 5px 25px -10px var(--green-accent);
+  box-shadow: 0 10px 25px -15px var(--green-accent);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   overflow: hidden;
@@ -290,12 +294,12 @@ nav .container {
 
 .project-card:hover {
   border-color: var(--green-accent);
-  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15);
+  box-shadow: 0 10px 25px -15px var(--green-accent);
   transform: scale(1.05);
 }
 .project-img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   object-fit: cover;
 }
 .project-preview {
@@ -384,7 +388,7 @@ nav .container {
   background: var(--bg-card);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
-  box-shadow: 0 5px 25px -10px var(--green-accent);
+  box-shadow: 0 10px 25px -15px var(--green-accent);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   padding: 1.5rem;
