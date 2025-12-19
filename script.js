@@ -24,43 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
   }
 
-  function copyToClipboard(text) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard
-        .writeText(text)
-        .then(() => triggerSuccessEffect())
-        .catch(err => {
-          console.error('Clipboard API failed:', err);
-          fallbackCopy(text);
-        });
-    } else {
-      fallbackCopy(text);
-    }
-  }
-
-  function fallbackCopy(text) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    textArea.style.position = 'fixed';
-    textArea.style.opacity = '0';
-
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-
-    try {
-      const successful = document.execCommand('copy');
-      if (successful) triggerSuccessEffect();
-    } catch (err) {
-      console.error('Fallback copy error:', err);
-    }
-
-    document.body.removeChild(textArea);
-  }
-
   if (copyWrapper) {
     copyWrapper.addEventListener('click', () => {
-      copyToClipboard(email);
+      navigator.clipboard.writeText(email).then(triggerSuccessEffect);
     });
   }
 
@@ -85,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add('hidden');
     observer.observe(el);
   });
+  
   const mobileBtn = document.getElementById('mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
 
