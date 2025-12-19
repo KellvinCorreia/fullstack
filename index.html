@@ -8,6 +8,9 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link"
+      >Pular para o conteúdo principal</a
+    >
     <header>
       <div class="container">
         <div class="logo">Kellvin.dev</div>
@@ -17,6 +20,7 @@
           aria-label="Abrir Menu"
         >
           <svg
+            aria-hidden="true"
             class="icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -42,6 +46,7 @@
             aria-label="Alternar Tema"
           >
             <svg
+              aria-hidden="true"
               class="icon icon-moon"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -54,6 +59,7 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
             <svg
+              aria-hidden="true"
               class="icon icon-sun"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -78,7 +84,7 @@
       </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="main-content" tabindex="-1">
       <section class="hero" id="about">
         <span class="badge">Full Stack Developer</span>
         <h1>
@@ -135,8 +141,13 @@
             </svg>
             LinkedIn
           </a>
-          <div class="minimal-link email-copy-wrapper" id="copy-email-hero">
+          <button
+            type="button"
+            class="minimal-link email-copy-wrapper"
+            id="copy-email-hero"
+          >
             <svg
+              aria-hidden="true"
               class="icon"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -153,6 +164,7 @@
             </svg>
             <span>kellvin.correia@gmail.com</span>
             <svg
+              aria-hidden="true"
               class="icon-sm"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -167,7 +179,7 @@
                 d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
               ></path>
             </svg>
-          </div>
+          </button>
         </div>
       </section>
 
@@ -204,7 +216,11 @@
         <div class="grid-projects">
           <article class="project-card">
             <div class="project-preview">
-              <img class="project-img" src="./imgs/landing-page.png" alt="" />
+              <img
+                class="project-img"
+                src="./imgs/landing-page.png"
+                alt="Preview da Landing Page do Portfolio pessoal"
+              />
             </div>
             <div class="project-content">
               <div class="tags">
@@ -267,7 +283,11 @@
 
           <article class="project-card">
             <div class="project-preview">
-              <img class="project-img" src="./imgs/gromuse.png" alt="" />
+              <img
+                class="project-img"
+                src="./imgs/gromuse.png"
+                alt="Preview da Landing Page Gromuse Green Market"
+              />
             </div>
             <div class="project-content">
               <div class="tags">
@@ -387,7 +407,7 @@
         </div>
 
         <div class="grid-skills">
-          <div class="skill-card">
+          <div class="skill-card" tabindex="0">
             <div class="skill-header">
               <div class="skill-icon-box">
                 <svg
@@ -414,7 +434,7 @@
             </ul>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card" tabindex="0">
             <div class="skill-header">
               <div class="skill-icon-box">
                 <svg
@@ -442,7 +462,7 @@
             </ul>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card" tabindex="0">
             <div class="skill-header">
               <div class="skill-icon-box">
                 <svg
@@ -471,7 +491,7 @@
               <li>Scrum / Agile</li>
             </ul>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" tabindex="0">
             <div class="skill-header">
               <div class="skill-icon-box">
                 <svg

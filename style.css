@@ -38,6 +38,29 @@ body {
   overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--green-accent);
+  outline-offset: 4px;
+}
+
 body {
   background-color: var(--bg-main);
   color: var(--text-main);
@@ -73,6 +96,26 @@ body {
 .icon-lg {
   width: 48px;
   height: 48px;
+}
+
+/* --- SKIP LINK (ACCESSIBILITY) --- */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: 0;
+  background: var(--green-accent);
+  color: #02040a;
+  padding: 1rem;
+  z-index: 1000;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--font-body);
+  border-radius: 0 0 8px 0;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* --- HEADER --- */
@@ -238,6 +281,12 @@ header .container {
   display: flex;
   align-items: center;
   position: relative;
+  /* Reset button styles */
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .email-copy-wrapper .icon-sm {
@@ -639,4 +688,21 @@ footer {
 .show {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hidden {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
