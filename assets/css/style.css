@@ -36,6 +36,7 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Custom Scrollbar */
@@ -76,6 +77,30 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 80px;
+  /* Smooth Theme Transition */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero Entrance Animations */
+.hero > * {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero .profile-box {
+  animation-delay: 0.1s;
+}
+.hero .badge {
+  animation-delay: 0.3s;
+}
+.hero h1 {
+  animation-delay: 0.5s;
+}
+.hero p {
+  animation-delay: 0.7s;
+}
+.hero .hero-contacts-minimal {
+  animation-delay: 0.9s;
 }
 
 .container {
