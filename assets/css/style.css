@@ -173,6 +173,14 @@ header .container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.logo:hover {
+  color: var(--green-accent);
 }
 
 .logo-box {
@@ -193,13 +201,25 @@ header .container {
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
-  border-bottom: 1px solid transparent;
-  border-image: linear-gradient(
-      to right,
-      var(--text-muted),
-      var(--green-accent)
-    )
-    1;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(to right, var(--text-muted), var(--green-accent));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 .nav-links a:hover {
   color: var(--green-accent);
