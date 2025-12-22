@@ -211,13 +211,13 @@ header .container {
 /* --- HERO --- */
 .hero {
   text-align: center;
-  padding: 2rem 0 clamp(4rem, 8vw, 6rem);
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 6rem);
   max-width: 800px;
   margin: 0 auto;
 }
 
 .profile-box {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   display: flex;
   justify-content: center;
 }
@@ -513,7 +513,7 @@ section {
 /* --- SKILLS --- */
 .center-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .grid-skills {
