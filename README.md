@@ -22,9 +22,14 @@ Este portfólio é uma **Landing Page Responsiva** construída do zero, sem o us
   - Suporte a **Movimento Reduzido** (`prefers-reduced-motion`).
   - Semântica e ARIA attributes otimizados para leitores de tela.
 - **Responsividade & UI**:
+  - **Suporte 4K/Ultrawide**: Layout fluido que se adapta a telas grandes (até 2500px+).
   - Menu Mobile com efeito Glassmorphism.
   - Layout adaptável para mobile, tablet e desktop.
   - Scrollbar e Focus Ring personalizados no tema do site.
+- **Segurança & Performance**:
+  - **CSP (Content Security Policy)**: Proteção contra XSS e injeção de dados.
+  - **Links Seguros**: `rel="noopener noreferrer"` em saídas externas.
+  - **Renderização Dinâmica**: Projetos carregados via JavaScript para HTML mais limpo.
 
 ---
 
