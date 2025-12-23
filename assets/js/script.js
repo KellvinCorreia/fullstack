@@ -52,8 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Task Manager',
-      description:
-        'Aplicação para gerenciamento de tarefas.',
+      description: 'Aplicação para gerenciamento de tarefas.',
       tags: ['HTML', 'CSS', 'JavaScript'],
       image: '/assets/img/to-do.png',
       repoLink: 'https://github.com/KellvinCorreia/ToDoList',
@@ -111,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const codeLink = document.createElement('a');
       codeLink.href = project.repoLink;
       codeLink.target = '_blank';
+      codeLink.rel = 'noopener noreferrer';
       codeLink.className = 'project-link';
       codeLink.innerHTML = `
         <svg class="icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const liveLink = document.createElement('a');
       liveLink.href = project.liveLink;
       liveLink.target = '_blank';
+      liveLink.rel = 'noopener noreferrer';
       liveLink.className = 'project-link';
       liveLink.innerHTML = `
         Live

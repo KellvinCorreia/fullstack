@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com https://opengraph.githubassets.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';"
+    />
     <title>Kelvin Correia | Full Stack Developer</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -108,6 +112,7 @@
           <a
             href="https://github.com/KellvinCorreia"
             target="_blank"
+            rel="noopener noreferrer"
             class="minimal-link"
           >
             <svg
@@ -129,6 +134,7 @@
           <a
             href="https://linkedin.com/in/kellvin-correia-alves/"
             target="_blank"
+            rel="noopener noreferrer"
             class="minimal-link"
           >
             <svg
@@ -196,12 +202,13 @@
           <div>
             <h2 class="section-title">Projetos selecionados</h2>
             <p class="section-desc">
-              Experimentos práticos e projetos da Alpha Edtech.
+              Experimentos práticos e projetos.
             </p>
           </div>
           <a
             href="https://github.com/KellvinCorreia"
             target="_blank"
+            rel="noopener noreferrer"
             class="view-all"
           >
             GitHub
@@ -221,14 +228,12 @@
           </a>
         </div>
 
-        <div class="grid-projects" id="projects-container">
-          <!-- Projects will be rendered here by JS -->
-        </div>
+        <div class="grid-projects" id="projects-container"></div>
       </section>
 
       <section id="skills">
         <div class="center-header">
-          <h2 class="section-title">Alpha Edtech Stack</h2>
+          <h2 class="section-title">Tech Stack</h2>
           <p class="section-desc">
             Ecossistema JavaScript com foco em full stack.
           </p>
