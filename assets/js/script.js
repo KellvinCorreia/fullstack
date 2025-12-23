@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Task Manager',
       description:
-        'Aplicação Full Stack para gerenciamento de tarefas.',
+        'Aplicação para gerenciamento de tarefas.',
       tags: ['HTML', 'CSS', 'JavaScript'],
       image: '/assets/img/to-do.png',
       repoLink: 'https://github.com/KellvinCorreia/ToDoList',
