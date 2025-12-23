@@ -179,6 +179,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Tech Carousel
+  function initTechCarousel() {
+    const track = document.getElementById('tech-track');
+    if (!track) return;
+
+    const items = Array.from(track.children);
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      track.appendChild(clone);
+    });
+  }
+  initTechCarousel();
 });
 
 function updateYear() {

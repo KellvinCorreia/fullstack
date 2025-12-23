@@ -30,6 +30,7 @@ Este portfólio é uma **Landing Page Responsiva** construída do zero, sem o us
   - **CSP (Content Security Policy)**: Proteção contra XSS e injeção de dados.
   - **Links Seguros**: `rel="noopener noreferrer"` em saídas externas.
   - **Renderização Dinâmica**: Projetos carregados via JavaScript para HTML mais limpo.
+  - **Tech Stack Carousel**: Carrossel infinito animado com ícones reais (FontAwesome) e duplicação inteligente via JS.
 
 ---
 
