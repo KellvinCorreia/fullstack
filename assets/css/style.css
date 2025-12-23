@@ -821,3 +821,95 @@ footer {
     transition: none;
   }
 }
+
+/* --- TECH CAROUSEL --- */
+.tech-carousel-section {
+  padding: 2rem 0 4rem;
+  overflow: hidden;
+  position: relative;
+  /* Optional: bg gradient or transparent */
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-container::before,
+.carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-main), transparent);
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-main), transparent);
+}
+
+.tech-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  /* Animation duration will be dynamic ideally, but fixed is fine */
+  animation: scroll 40s linear infinite;
+  padding: 1rem 0;
+}
+
+.tech-track:hover {
+  animation-play-state: paused;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  min-width: 140px; /* Ensure pill size */
+  justify-content: center;
+  backdrop-filter: blur(var(--glass-blur));
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.tech-item:hover {
+  border-color: var(--green-accent);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  transform: translateY(-2px);
+}
+
+.tech-item span {
+  font-family: var(--font-code);
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.tech-icon {
+  font-size: 1.5rem; /* FontAwesome sizing */
+  color: var(--green-accent);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 1rem)); /* Moves half way (original set) + half gap */
+  }
+}
