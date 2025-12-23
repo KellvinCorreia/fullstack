@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'Aplicação para gerenciamento de tarefas.',
       tags: ['HTML', 'CSS', 'JavaScript'],
-      image: '/assets/img/to-do.png',
+      image: 'assets/img/to-do.png',
       repoLink: 'https://github.com/KellvinCorreia/ToDoList',
       liveLink: 'https://kellvincorreia.github.io/ToDoList/'
     }
